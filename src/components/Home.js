@@ -1,12 +1,8 @@
-import Container from 'react-bootstrap/esm/Container';
-import Row from 'react-bootstrap/esm/Row';
-import Col from 'react-bootstrap/esm/Col';
 import React, { useState } from 'react';
 import BreakingNewsTicker from './widgets/breaking-news-ticker/BreakingNewsTicker';
 import NewsBlock from './widgets/feed-containers/NewsBlock';
 import Channel from './channels/Channel';
 import './Home.css';
-
 
 const Home = ({ configData }) => {
     const [state] = useState({
@@ -22,16 +18,12 @@ const Home = ({ configData }) => {
         <>
             <div className="App-header">
                 <h1>{state.config.appName}</h1>
-                <Container>
-                    <Row>
-                        {state.topBreakingNewsTicker.map((rssFeed) => (
-                            <Col sm> <BreakingNewsTicker feed={rssFeed} /></Col>
-                        ))}
-                    </Row>
-                </Container>
+                {state.topBreakingNewsTicker.map((rssFeed) => (
+                    <BreakingNewsTicker feed={rssFeed} />
+                ))}
             </div>
             {selectedChannel &&
-                <Channel rssChannel={selectedChannel} setSelectedChannel={setSelectedChannel} />
+                <Channel rssChannel={selectedChannel} setSelectedChannel={setSelectedChannel}/>
             }
             {!selectedChannel &&
                 <>
