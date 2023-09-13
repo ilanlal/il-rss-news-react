@@ -1,0 +1,139 @@
+{
+    "appName": "חדשות ישראל - RSS",
+    "appVersion": "1.0.0",
+    "appIdentifier": "com.mycompany.myapp",
+    "Feeads": [
+        {
+            "style": "one-column",
+            "max": 1,
+            "rate": 0.9,
+            "tags": [
+                "#מעריב",
+                "#חדשות",
+                "#חדשות בעולם"
+            ],
+            "url":"https://www.maariv.co.il/Rss/RssFeedsChadashotBaOlam"
+        },
+        {
+            "max": 2,
+            "rate": 0.5,
+            "tags": [
+                "#ואלה",
+                "#ספורט",
+                "#כדורסל"
+            ],
+            "url": "https://rss.walla.co.il/feed/151"
+        },
+        {
+            "max": 4,
+            "rate": 0.5,
+            "tags": [
+                "#מעריב",
+                "#טכנולוגיה"
+            ],
+            "url": "https://www.maariv.co.il/Rss/RssFeedsTechnologeya"
+        },
+        {
+            "style": "tow-column",
+            "max": 4,
+            "rate": 0.5,
+            "tags": [
+                "מעריב",
+                "חדשות"
+            ],
+            "url": "https://www.maariv.co.il/Rss/RssChadashot"
+        },
+        {
+            "style": "tow-column",
+            "max": 2,
+            "rate": 0.5,
+            "tags": [
+                "#ואלה",
+                "#טכנולוגיה",
+                "#סייבר"
+            ],
+            "url": "https://rss.walla.co.il/feed/6?type=main"
+        },
+        {
+            "style": "tow-column",
+            "max": 4,
+            "rate": 0.9,
+            "tags": [
+                "#ואלה",
+                "#חדשות",
+                "#פוליטי-מדיני"
+            ],
+            "url": "https://rss.walla.co.il/feed/2686"
+        },
+        {
+            "style": "three-column",
+            "max": 6,
+            "rate": 0.5,
+            "tags": [
+                "#מעריב",
+                "#חדשות",
+                "#ספורט",
+                "#כדורסל"
+            ],
+            "url": "https://www.maariv.co.il/Rss/RssFeedsKadorsal"
+        },
+        {
+            "style": "tow-column",
+            "max": 3,
+            "rate": 0.5,
+            "tags": [
+                "#מעריב",
+                "#חדשות",
+                "#ספורט",
+                "#כדורגל ישראלי"
+            ],
+            "url": "https://www.maariv.co.il/Rss/RssFeedsKadoregelIsreal"
+        }
+    ],
+    "BreakingNewsTicker": [
+        {
+            "style": "top",
+            "max": 50,
+            "speed": 30,
+            "rate": 0.9,
+            "tags": [
+                "#ואלה",
+                "#צבא ובטחון"
+            ],
+            "url": "https://rss.walla.co.il/feed/2689"
+        },
+        {
+            "style": "bottom",
+            "speed": 30,
+            "max": 30,
+            "rate": 0.9,
+            "tags": [
+                "#ואלה",
+                "#כסף"
+            ],
+            "url": "https://rss.walla.co.il/feed/557"
+        },
+        {
+            "style": "bottom",
+            "speed": 40,
+            "max": 30,
+            "rate": 0.9,
+            "tags": [
+                "#מעריב",
+                "#מבזקים"
+            ],
+            "url": "https://www.maariv.co.il/Rss/RssFeedsMivzakiChadashot"
+        },
+        {
+            "style": "bottom",
+            "speed": 30,
+            "max": 30,
+            "rate": 0.9,
+            "tags": [
+                "#מעריב",
+                "#עסקים"
+            ],
+            "url": "https://www.maariv.co.il/Rss/RssFeedsAsakim"
+        }
+    ]
+}

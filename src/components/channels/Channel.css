@@ -1,0 +1,99 @@
+.channel {
+    text-align: right;
+    margin-top: 100px;
+    max-width: 640px;
+    display: inline-block;
+}
+
+.channel button {
+    border: 0;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 1.4em;
+    position: fixed;
+    top:60px;
+    opacity: 0.5;
+}
+
+.channel button:hover {
+    opacity: 1;
+}
+
+.rss-title {
+    display: block;
+    font-size: 0.9em;
+    text-align: center;
+    width: 100%;
+}
+.rss-list {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.rss-item {
+    display: inline-block;
+}
+
+.rss-item img {
+    display: block;
+    height: 100%;
+    border-radius: 13px;
+    width: auto;
+    margin: 8px;
+    float: left;
+}
+
+.rss-item .rss-item-title {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    font-size: 1.0em;
+    text-decoration: none;
+}
+
+.rss-item .rss-item-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    max-width: 100%;
+    font-size: 0.8em;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    height:100px;
+    text-align: right;
+    vertical-align: top;
+}
+.rss-item .rss-item-enclosure {
+    display: block;
+}
+
+.rss-item .rss-item-meta {
+    display: block;
+    padding: 4px 0;
+    text-align: right;
+    
+    font-size: 0.7em;
+}
+
+.rss-item a {
+    padding: 4px 0;
+    text-decoration: none;   
+}
+
+.rss-item .rss-item-meta span {
+    display: inline-block;
+    text-align: left;
+    padding: 0 4px;
+    
+}

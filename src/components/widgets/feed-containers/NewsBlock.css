@@ -1,0 +1,120 @@
+.feed-container {
+    display: table;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.feed-container .rss-title {
+    display: block;
+    font-size: 1.0em;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    background-color: #00F;
+    color: #EEF;
+    text-align: right;
+    padding: 2px 4px;
+}
+
+.feed-container .rss-list {
+    display: table-row;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.feed-container .rss-list .rss-item {
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+}
+
+.feed-container .rss-item .rss-item-content {
+    display: block;
+    text-align: right;
+}
+
+.feed-container .rss-list .rss-item img,
+.feed-container .rss-item-enclosure img {
+    border-radius: 3px;
+    width: auto;
+    float: left;
+}
+
+.feed-container .rss-item .rss-item-title {
+    font-size: 1.4em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 98%;
+    text-align: right;
+    text-decoration: none;
+}
+
+.feed-container .rss-item.one-column {
+    margin: 0 auto;
+    font-size: 1.0em;
+    padding: 0 4px;
+    display: block;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.feed-container .rss-item.one-column .rss-item-title {
+    font-size: 2.2em;
+    white-space: wrap;
+}
+
+.feed-container .rss-item.one-column img {
+    height: 250px;
+    width: auto;
+}
+
+.feed-container .rss-item-title {
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 98%;
+    font-size: 1.0em;
+    text-decoration: none;
+}
+
+.feed-container .rss-item.tow-column {
+    width: 46%;
+    cursor: pointer;
+    margin: 6px 4px;
+    padding: 6px 4px;
+}
+
+.feed-container .rss-item.tow-column img {
+    height: 100px;
+    float: right;
+}
+
+.feed-container .rss-item.three-column {
+    width: 30%;
+    margin: 6px 4px;
+    padding: 6px 4px;
+}
+
+.feed-container .rss-item.three-column img {
+    height: 80px;
+}
+
+.feed-container .rss-item.one-column .rss-item-content {
+    height: auto;
+    font-size: 1.6em;
+}
+
+.feed-container .rss-item .rss-item-enclosure {
+    display: block;
+}
+
+.feed-container .rss-item .rss-item-meta {
+    display: block;
+    padding: 4px 0;
+    float: right;
+    font-size: 0.7em;
+}

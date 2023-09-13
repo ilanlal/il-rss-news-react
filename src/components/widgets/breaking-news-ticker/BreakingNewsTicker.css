@@ -1,0 +1,25 @@
+/* BreakingNewsTicker container */
+.breaking-news-ticker {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Ticker container for scrolling effect */
+  .ticker-container {
+    display: flex;
+    transition: transform 3s linear;
+  }
+  
+  /* Individual news items */
+  .ticker-item {
+    flex: 0 0 auto;
+    text-align: right;
+    white-space: nowrap;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  

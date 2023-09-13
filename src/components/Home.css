@@ -1,0 +1,32 @@
+.App-header {
+  position: fixed;
+  display: block;
+  width: 100%;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-header h1 {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: red;
+  text-align: center;
+}
+
+.rss-panel {
+  display: block;
+  width: 1200px;
+  margin: 50px auto;
+}
+
+.App-footer {
+  background-color: #444;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  width: 100%;
+  display: block;
+}
