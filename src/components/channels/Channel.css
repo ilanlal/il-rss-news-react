@@ -1,8 +1,7 @@
 .channel {
     text-align: right;
-    margin-top: 100px;
-    max-width: 640px;
-    display: inline-block;
+    margin: 50px auto;
+    width: 800px;
 }
 
 .channel button {
@@ -20,53 +19,41 @@
     opacity: 1;
 }
 
-.rss-title {
-    display: block;
-    font-size: 0.9em;
-    text-align: center;
-    width: 100%;
-}
-.rss-list {
-    display: block;
-    height: 100%;
+.channel .rss-list {
+    display: block;    height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
 }
 
-.rss-item {
+.channel .rss-item {
     display: inline-block;
+    font-size: 1.1em;
+    margin: 20px 0;
+    width: 100%;
 }
 
-.rss-item img {
+.channel .rss-item img {
     display: block;
-    height: 100%;
-    border-radius: 13px;
+    height: 200px;
     width: auto;
     margin: 8px;
-    float: left;
+    float: right;
 }
 
-.rss-item .rss-item-title {
+.channel .rss-item .rss-item-title {
     padding: 0;
     margin: 0;
-    display: inline-block;
+    display: block;
     text-align: right;
-    vertical-align: top;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-    font-size: 1.0em;
+    width: 100%;
+    font-size: 1.3em;
     text-decoration: none;
 }
 
-.rss-item .rss-item-content {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    
-    max-width: 100%;
-    font-size: 0.8em;
+.channel .rss-item .rss-item-content {
+    width: 100%;
+    font-size: 1.0em;
     text-decoration: none;
     padding: 0;
     margin: 0;
@@ -74,11 +61,11 @@
     text-align: right;
     vertical-align: top;
 }
-.rss-item .rss-item-enclosure {
+.channel .rss-item .rss-item-enclosure {
     display: block;
 }
 
-.rss-item .rss-item-meta {
+.channel .rss-item .rss-item-meta {
     display: block;
     padding: 4px 0;
     text-align: right;
@@ -86,12 +73,12 @@
     font-size: 0.7em;
 }
 
-.rss-item a {
+.channel .rss-item a {
     padding: 4px 0;
     text-decoration: none;   
 }
 
-.rss-item .rss-item-meta span {
+.channel .rss-item .rss-item-meta span {
     display: inline-block;
     text-align: left;
     padding: 0 4px;
