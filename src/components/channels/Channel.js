@@ -28,30 +28,23 @@ const Channel = ({ rssChannel, setSelectedChannel }) => {
             <button onClick={onClose} title='חזרה'><span role="img" aria-label="סגירה">❌</span></button>
             {news && (
                 <div>
-                    <ul className='rss-list'>
+                    <ul className='channel-list'>
                         {
                             news.map((item, index) => (
-                                <li className={'rss-item'} key={index}>
-                                    <h3 className='rss-item-title'>{item.title}</h3>
-                                    {item.enclosure &&
-                                        <>
-                                            <div className='rss-item-enclosure'>
-                                                {item.enclosure && item.enclosure.url &&
-                                                    <img src={item.enclosure.url} alt={item.title} />
-                                                }
-                                            </div>
-                                            <div className='rss-item-content' dangerouslySetInnerHTML={{ __html: item.contentSnippet }} />
-                                        </>
+                                <li className={'channel-item'} key={index}>
+                                    <h3 className='channel-item-title'>{item.title}</h3>
+                                    {item.enclosure && item.enclosure.url
+                                        ? 
+                                        (<>
+                                            <div className='channel-enclosure'>{item.enclosure && item.enclosure.url && <img src={item.enclosure.url} alt={item.title} />}</div>
+                                            <div className='channel-item-content' dangerouslySetInnerHTML={{ __html: item.contentSnippet }} />
+                                        </>)
+                                        : <div className='channel-item-content' dangerouslySetInnerHTML={{ __html: item.content }} />
                                     }
-                                    {!item.enclosure &&
-                                        <>
-                                            <div className='rss-item-content' dangerouslySetInnerHTML={{ __html: item.content }} />
-                                        </>
-                                    }
-                                    <div className='rss-item-meta'>
-                                        <span className='rss-item-meta-date'>{item.pubDate}</span>
-                                        <span className='rss-item-meta-author'>{item.author}</span>
-                                        <span className='rss-item-meta-rate'>{rssChannel.rate}</span>
+                                    <div className='channel-item-meta'>
+                                        <span className='channel-item-meta-date'>{item.pubDate}</span>
+                                        <span className='channel-item-meta-author'>{item.author}</span>
+                                        <span className='channel-item-meta-rate'>{rssChannel.rate}</span>
                                     </div>
                                 </li>)
                             )

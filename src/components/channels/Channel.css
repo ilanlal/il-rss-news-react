@@ -5,13 +5,16 @@
 }
 
 .channel button {
-    border: 0;
-    border-radius: 4px;
+    border: 1px solid #000;
+    border-radius: 10px 0 0 10px;
     padding: 4px 8px;
     cursor: pointer;
     font-size: 1.4em;
     position: fixed;
-    top:60px;
+    top:80px;
+    right: 10px;
+    width: 80px;
+    background-clip: padding-box;
     opacity: 0.5;
 }
 
@@ -20,67 +23,55 @@
 }
 
 .channel .rss-list {
-    display: block;    height: 100%;
+    display: block;    
+    height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
 }
 
-.channel .rss-item {
+.channel-item {
+    display: block;
+    font-size: 1.3em;
+    margin: 50px 0;
+    width: 100%;
+
+}
+
+.channel-item-title {
+    padding: 0;
+    margin: 0;
     display: inline-block;
-    font-size: 1.1em;
-    margin: 20px 0;
-    width: 100%;
-}
-
-.channel .rss-item img {
-    display: block;
-    height: 200px;
-    width: auto;
-    margin: 8px;
-    float: right;
-}
-
-.channel .rss-item .rss-item-title {
-    padding: 0;
-    margin: 0;
-    display: block;
     text-align: right;
     width: 100%;
     font-size: 1.3em;
     text-decoration: none;
 }
 
-.channel .rss-item .rss-item-content {
-    width: 100%;
+.channel-enclosure {
+    display: block;
+    font-size: 1.1em;
+}
+
+.channel-enclosure img {
+    display: block;
+    height: auto;
+    width: 30%;
+    float: right;
+}
+
+.channel-item-content {
+    display: block;
     font-size: 1.0em;
     text-decoration: none;
-    padding: 0;
-    margin: 0;
-    height:100px;
-    text-align: right;
-    vertical-align: top;
-}
-.channel .rss-item .rss-item-enclosure {
-    display: block;
+    text-align: justify;
+    width: auto;
 }
 
-.channel .rss-item .rss-item-meta {
-    display: block;
-    padding: 4px 0;
-    text-align: right;
-    
-    font-size: 0.7em;
-}
-
-.channel .rss-item a {
-    padding: 4px 0;
-    text-decoration: none;   
-}
-
-.channel .rss-item .rss-item-meta span {
+.channel-item-meta {
     display: inline-block;
-    text-align: left;
-    padding: 0 4px;
-    
+    padding: 4px 0;
+    text-align: right;   
+    font-size: 0.7em;
+    bottom: 0;
 }

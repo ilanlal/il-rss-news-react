@@ -14,7 +14,7 @@ const NewsBlock = ({ feed, setSelectedChannel }) => {
     } catch (error) {
       console.error('Error fetching RSS feed:', error);
     }
-  },[rssUrl]);
+  }, [rssUrl]);
 
   useEffect(() => {
     fetchFeed();
@@ -39,27 +39,22 @@ const NewsBlock = ({ feed, setSelectedChannel }) => {
                   className={'rss-item ' + (feed.style || 'tow-column')}
                   onClick={onClicked.bind(this, feed)}
                 >
-                  <h3 className='rss-item-title'>{item.title}</h3>
-                  {item.enclosure &&
-                    <>
-                      <div className='rss-item-enclosure'>
-                        {item.enclosure && item.enclosure.url &&
+                  <>
+                    <h3 className='rss-item-title' title={item.title}>{item.title}</h3>
+                    {item.enclosure && item.enclosure.url
+                      ? (
+                        <div className='enclosure'>
                           <img src={item.enclosure.url} alt={item.title} />
-                        }
-                      </div>
-                      <div className='rss-item-content' dangerouslySetInnerHTML={{ __html: item.contentSnippet }} />
-                    </>
-                  }
-                  {!item.enclosure &&
-                    <>
-                      <div className='rss-item-content' dangerouslySetInnerHTML={{ __html: item.content }} />
-                    </>
-                  }
-                  <div className='rss-item-meta'>
-                    <span className='rss-item-meta-date'>{item.pubDate}</span>
-                    <span className='rss-item-meta-author'>{item.author}</span>
-                    <span className='rss-item-meta-rate'>{feed.rate}</span>
-                  </div>
+                          <div className='rss-item-content' dangerouslySetInnerHTML={{ __html: item.contentSnippet }} />
+                        </div>
+                      ) : <div className='rss-item-content' dangerouslySetInnerHTML={{ __html: item.content }} />
+                    }
+                    <div className='rss-item-meta'>
+                      <span className='rss-item-meta-date'>{item.pubDate}</span>
+                      <span className='rss-item-meta-author'>{item.author}</span>
+                      <span className='rss-item-meta-rate'>{feed.rate}</span>
+                    </div>
+                  </>
                 </li>)
               )
             }
