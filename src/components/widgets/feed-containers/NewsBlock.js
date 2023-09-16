@@ -25,7 +25,7 @@ const NewsBlock = ({ feed, setSelectedChannel }) => {
   };
 
   return (
-    <div className='feed-container'>
+    <div className={'feed-container ' + (feed.style || 'tow-column')}>
       {feedData && (
         <>
           {feed.style !== 'one-column' &&
@@ -36,7 +36,7 @@ const NewsBlock = ({ feed, setSelectedChannel }) => {
               feedData.items.slice(0, feed.max).map((item, index) => (
                 <li
                   key={index}
-                  className={'rss-item ' + (feed.style || 'tow-column')}
+                  className={'rss-item'}
                   onClick={onClicked.bind(this, feed)}
                 >
                   <>

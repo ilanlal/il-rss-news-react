@@ -25,7 +25,7 @@ const Channel = ({ rssChannel, setSelectedChannel }) => {
 
     return (
         <div className='channel'>
-            <button onClick={onClose} title='חזרה'><span role="img" aria-label="סגירה">❌</span></button>
+            <button className='channel-button' onClick={onClose} title='חזרה לדף הבית'><span role="img" aria-label="עמוד הבית">🏠 בית</span></button>
             {news && (
                 <div>
                     <ul className='channel-list'>
