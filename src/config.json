@@ -77,9 +77,9 @@
             "url": "https://rss.walla.co.il/feed/6?type=main"
         },
         {
-            "style": "three-column",
-            "max": 6,
-            "rate": 0.5,
+            "style": "tow-column",
+            "max": 4,
+            "rate": 8,
             "tags": [
                 "#מעריב",
                 "#חדשות",
@@ -90,8 +90,8 @@
         },
         {
             "style": "tow-column",
-            "max": 3,
-            "rate": 0.5,
+            "max": 4,
+            "rate": 8,
             "tags": [
                 "#מעריב",
                 "#חדשות",
@@ -99,15 +99,16 @@
                 "#כדורגל ישראלי"
             ],
             "url": "https://www.maariv.co.il/Rss/RssFeedsKadoregelIsreal"
-        }, {
+        },
+        {
             "style": "tow-column",
-            "max": 4,
-            "rate": 21,
+            "max": 6,
+            "rate": 5,
             "tags": [
                 "#מעריב",
-                "#כלכלה בארץ"
+                "#אופנה"
             ],
-            "url":"https://www.maariv.co.il/Rss/RssFeedsKalkalaBaArez"
+            "url": "https://www.maariv.co.il/Rss/RssFeedsTMIFashion"
         }
     ],
     "BreakingNewsTicker": [
