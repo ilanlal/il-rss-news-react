@@ -16,19 +16,19 @@ function ComplexPanel({ feedInfo, onClick }) {
 
   useMemo(async () => {
     return await parser.parseURL(state.feed.url)
-      .catch((error) => {
-        console.error('Error fetching RSS feed:', error);
-      })
       .then((response) => {
         console.log('fetchFeed -> response:', response);
         const items = response.items.slice(0, state.feed.max);
         setPosts(items);
         return items;
+      })
+      .catch((error) => {
+        console.error('CHECK YOUR INTERNET CONNECTION', error);
       });
   }, [state.feed.url, state.feed.max]);
 
   return (
-    <Stack display={"block"} spacing={0} sx={{ p: 1, textAlign: 'justify' }}>
+    <Stack display={"inline-block"} spacing={1} sx={{ p: 0, textAlign: 'justify' }}>
       <>
         {posts && posts.slice(0, 1).map((post, index) => (
           <StackItem display={"inline-block"} key={'complex_' + index}>

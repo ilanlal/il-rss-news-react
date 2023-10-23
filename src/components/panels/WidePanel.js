@@ -15,14 +15,17 @@ function WidePanel({feedInfo, onClick }) {
 
   useMemo(async () => {
     return await parser.parseURL(state.feed.url)
-      .catch((error) => {
-        console.error('Error fetching RSS feed:', error);
-      })
       .then((response) => {
         console.log('fetchFeed -> response:', response);
+        if(!response)
+          return null;
+
         const items = response.items.slice(0, state.feed.max);
         setPosts(items);
         return items;
+      })
+      .catch((error) => {
+        console.info('Error fetching RSS feed: CHECK YOU INTRERNET CONNECTION', error);
       });
   }, [state.feed.url, state.feed.max]);
 

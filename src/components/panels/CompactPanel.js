@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import StackItem from '@mui/material/Stack';
 import CompactPaper from "../papers/CompactPaper";
 
-function CompactPanel({feedInfo, onClick }) {
+function CompactPanel({ feedInfo, onClick }) {
   const [state] = useState({
     feed: feedInfo
   });
@@ -15,14 +15,14 @@ function CompactPanel({feedInfo, onClick }) {
 
   useMemo(async () => {
     return await parser.parseURL(state.feed.url)
-      .catch((error) => {
-        console.error('Error fetching RSS feed:', error);
-      })
       .then((response) => {
         console.log('fetchFeed -> response:', response);
         const items = response.items.slice(0, state.feed.max);
         setPosts(items);
         return items;
+      })
+      .catch((error) => {
+        console.error('Error fetching RSS feed: CHECK YOUR INTERNET CONNECTION', error);
       });
   }, [state.feed.url, state.feed.max]);
 
